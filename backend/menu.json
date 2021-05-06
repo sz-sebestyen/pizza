@@ -1,0 +1,218 @@
+[
+  {
+    "name": "Margherita",
+    "ingredients": {
+      "hu": ["paradicsomszósz", "mozzarella", "bazsalikom"],
+      "eng": ["tomato sauce", "mozzarella", "basil"]
+    },
+    "price": {
+      "HUF": 1740,
+      "EUR": 4.85
+    },
+    "weight": "500 g"
+  },
+  {
+    "name": "Sonka-gomba",
+    "ingredients": {
+      "hu": ["paradicsomszósz", "mozzarella", "sonka", "gomba"],
+      "eng": ["tomato sauce", "mozzarella", "ham", "mushrooms"]
+    },
+    "price": {
+      "HUF": 1830,
+      "EUR": 5.1
+    },
+    "weight": "550 g"
+  },
+  {
+    "name": "Calzone",
+    "ingredients": {
+      "hu": [
+        "paradicsomszósz",
+        "mozzarella",
+        "prosciutto",
+        "articsóka",
+        "bazsalikom",
+        "lilahagyma"
+      ],
+      "eng": [
+        "tomato sauce",
+        "Mozzarella",
+        "prosciutto",
+        "artichoke",
+        "basil",
+        "purple onion"
+      ]
+    },
+    "price": {
+      "HUF": 2070,
+      "EUR": 5.77
+    },
+    "weight": "550 g"
+  },
+  {
+    "name": "Füstöltsajtos",
+    "ingredients": {
+      "hu": ["paradicsomszósz", "sonka", "füstölt sajt", "kukorica"],
+      "eng": ["tomato sauce", "ham", "smoked cheese", "corn"]
+    },
+    "price": {
+      "HUF": 2070,
+      "EUR": 5.77
+    },
+    "weight": "550 g"
+  },
+  {
+    "name": "Magyaros",
+    "ingredients": {
+      "hu": [
+        "paradicsomszósz",
+        "kolbász",
+        "szalonna",
+        "csípős paprika",
+        "lilahagyma",
+        "Eidam sajt"
+      ],
+      "eng": [
+        "tomato sauce",
+        "sausage",
+        "bacon",
+        "hot peppers",
+        "purple onion",
+        "Eidam cheese"
+      ]
+    },
+    "price": {
+      "HUF": 2190,
+      "EUR": 6.11
+    },
+    "weight": "550 g"
+  },
+  {
+    "name": "Prosciutto",
+    "ingredients": {
+      "hu": ["paradicsomszósz", "mozzarella", "prosciutto crudo", "rukkola"],
+      "eng": ["tomato sauce", "mozzarella", "prosciutto crudo", "arugula"]
+    },
+    "price": {
+      "HUF": 2250,
+      "EUR": 6.27
+    },
+    "weight": "550 g"
+  },
+  {
+    "name": "Tonhalas",
+    "ingredients": {
+      "hu": [
+        "paradicsomszósz",
+        "mozzarella",
+        "tonhal",
+        "olivabogyó",
+        "lilahagyma",
+        "citrom"
+      ],
+      "eng": [
+        "tomato sauce",
+        "Mozzarella",
+        "tuna",
+        "olive",
+        "purple onion",
+        "citron"
+      ]
+    },
+    "price": {
+      "HUF": 2340,
+      "EUR": 6.53
+    },
+    "weight": "550 g"
+  },
+  {
+    "name": "Mediterrane",
+    "ingredients": {
+      "hu": [
+        "paradicsomszósz",
+        "mozzarella",
+        "baby spenót",
+        "koktélparadicsom",
+        "olivabogyó",
+        "kapribogyó"
+      ],
+      "eng": [
+        "tomato sauce",
+        "Mozzarella",
+        "baby spinach",
+        "Cherry tomato",
+        "olive",
+        "capers"
+      ]
+    },
+    "price": {
+      "HUF": 2070,
+      "EUR": 5.77
+    },
+    "weight": "550 g"
+  },
+  {
+    "name": "Vegetarian",
+    "ingredients": {
+      "hu": [
+        "paradicsomszósz",
+        "mozzarella",
+        "padlizsán",
+        "cukkini",
+        "paradicsom",
+        "gomba"
+      ],
+      "eng": [
+        "tomato sauce",
+        "Mozzarella",
+        "eggplant",
+        "zucchini",
+        "tomato",
+        "mushroom"
+      ]
+    },
+    "price": {
+      "HUF": 1890,
+      "EUR": 5.27
+    },
+    "weight": "550 g"
+  },
+  {
+    "name": "Tejfölös-szalonnás",
+    "ingredients": {
+      "hu": ["tejföl", "szalonna", "ropogós hagyma"],
+      "eng": ["sour cream", "bacon", "crispy onion"]
+    },
+    "price": {
+      "HUF": 1770,
+      "EUR": 4.94
+    },
+    "weight": "550 g"
+  },
+  {
+    "name": "Négysajtos",
+    "ingredients": {
+      "hu": [
+        "paradicsomszósz",
+        "mozzarella",
+        "parmezán",
+        "gorgonzola",
+        "füstölt sajt",
+        "bazsalikom"
+      ],
+      "eng": [
+        "tomato sauce",
+        "Mozzarella",
+        "Parmesan",
+        "gorgonzola",
+        "smoked cheese",
+        "basil"
+      ]
+    },
+    "price": {
+      "HUF": 2160,
+      "EUR": 6.02
+    },
+    "weight": "550 g"
+  }
+]
