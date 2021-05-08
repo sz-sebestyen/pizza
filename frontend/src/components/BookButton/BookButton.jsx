@@ -1,7 +1,7 @@
 import React from "react";
 
-function BookButton() {
-  return <button>Book a table</button>;
+function BookButton({ setIsBooking }) {
+  return <button onClick={() => setIsBooking(true)}>Book a table</button>;
 }
 
 export default BookButton;

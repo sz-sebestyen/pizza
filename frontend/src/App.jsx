@@ -9,7 +9,8 @@ const LOADING_MASK_DURATION = 2000; // milliseconds
 
 function App() {
   const [menu, setMenu] = useState();
-  const [loading, setLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isBooking, setIsBooking] = useState(false);
 
   const getMenu = async () => {
     try {
@@ -23,7 +24,7 @@ function App() {
   useEffect(() => {
     getMenu();
     setTimeout(() => {
-      setLoading(false);
+      setIsLoading(false);
     }, LOADING_MASK_DURATION);
   }, []);
 
@@ -33,11 +34,11 @@ function App() {
 
   return (
     <div className="">
-      {loading && <LoadingMask />}
+      {isLoading && <LoadingMask />}
       <FrontPage />
       <Menu />
-      <BookButton />
-      <BookForm />
+      <BookButton {...{ setIsBooking }} />
+      {isBooking && <BookForm {...{ setIsBooking }} />}
     </div>
   );
 }
