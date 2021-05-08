@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import LoadingMask from "./components/LoadingMask/LoadingMask";
+import FrontPage from "./components/FrontPage/FrontPage";
+import Menu from "./components/Menu/Menu";
 
 function App() {
   const [menu, setMenu] = useState();
