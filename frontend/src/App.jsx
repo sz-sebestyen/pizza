@@ -36,7 +36,7 @@ function App() {
     <div className="">
       {isLoading && <LoadingMask />}
       <FrontPage />
-      <Menu />
+      {menu && <Menu {...{ menu }} />}
       <BookButton {...{ setIsBooking }} />
       {isBooking && <BookForm {...{ setIsBooking }} />}
     </div>
