@@ -1,7 +1,7 @@
 import React from "react";
 
-function ScreenShadow() {
-  return <div></div>;
+function ScreenShadow({ setIsBooking }) {
+  return <div onClick={() => setIsBooking(false)}></div>;
 }
 
 export default ScreenShadow;
