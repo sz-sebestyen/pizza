@@ -8,6 +8,9 @@ module.exports = merge(common, {
   devServer: {
     contentBase: "./dist",
     watchContentBase: true,
+    hot: true,
+    open: true,
+    port: 5000,
     proxy: {
       "/menu": {
         target: "http://localhost:3000/",
