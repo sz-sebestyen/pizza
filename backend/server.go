@@ -18,5 +18,5 @@ func main() {
 }
 
 func menuHandler(w http.ResponseWriter, r *http.Request) {
-	http.Redirect(w, r, "/menu.json", 304)
+	http.Redirect(w, r, "/menu.json", http.StatusSeeOther)
 }
