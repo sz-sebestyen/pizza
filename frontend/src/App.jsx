@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import LoadingMask from "./components/LoadingMask/LoadingMask";
 import FrontPage from "./components/FrontPage/FrontPage";
 import Menu from "./components/Menu/Menu";
+import BookButton from "./components/BookButton/BookButton";
+import BookForm from "./components/BookForm/BookForm";
 
 function App() {
   const [menu, setMenu] = useState();
