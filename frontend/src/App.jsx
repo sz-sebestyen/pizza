@@ -5,6 +5,8 @@ import Menu from "./components/Menu/Menu";
 import BookButton from "./components/BookButton/BookButton";
 import BookForm from "./components/BookForm/BookForm";
 
+const LOADING_MASK_DURATION = 2000; // milliseconds
+
 function App() {
   const [menu, setMenu] = useState();
   const [loading, setLoading] = useState(true);
@@ -22,7 +24,7 @@ function App() {
     getMenu();
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, LOADING_MASK_DURATION);
   }, []);
 
   useEffect(() => {
