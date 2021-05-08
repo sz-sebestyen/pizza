@@ -8,6 +8,13 @@ module.exports = merge(common, {
   devServer: {
     contentBase: "./dist",
     watchContentBase: true,
+    proxy: {
+      "/menu": {
+        target: "http://localhost:3000/",
+        secure: false,
+        changeOrigin: true,
+      },
+    },
   },
   module: {
     rules: [
