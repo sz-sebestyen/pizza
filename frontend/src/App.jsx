@@ -7,6 +7,7 @@ import BookForm from "./components/BookForm/BookForm";
 
 function App() {
   const [menu, setMenu] = useState();
+  const [loading, setLoading] = useState(true);
 
   const getMenu = async () => {
     try {
@@ -19,13 +20,24 @@ function App() {
 
   useEffect(() => {
     getMenu();
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
   }, []);
 
   useEffect(() => {
     if (menu) console.log(menu);
   }, [menu]);
 
-  return <div className="bg-black">app</div>;
+  return (
+    <div className="">
+      {loading && <LoadingMask />}
+      <FrontPage />
+      <Menu />
+      <BookButton />
+      <BookForm />
+    </div>
+  );
 }
 
 export default App;

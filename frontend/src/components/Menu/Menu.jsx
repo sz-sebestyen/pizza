@@ -3,7 +3,7 @@ import Pizza from "./Pizza";
 import React from "react";
 
 function Menu() {
-  return <div></div>;
+  return <div>Menu</div>;
 }
 
 export default Menu;
