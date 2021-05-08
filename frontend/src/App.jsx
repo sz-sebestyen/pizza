@@ -4,6 +4,7 @@ import FrontPage from "./components/FrontPage/FrontPage";
 import Menu from "./components/Menu/Menu";
 import BookButton from "./components/BookButton/BookButton";
 import BookForm from "./components/BookForm/BookForm";
+import Introduction from "./components/Introduction/Introduction";
 
 const LOADING_MASK_DURATION = 2000; // milliseconds
 
@@ -36,6 +37,9 @@ function App() {
     <div className="">
       {isLoading && <LoadingMask />}
       <FrontPage />
+
+      <Introduction />
+
       {menu && <Menu {...{ menu }} />}
       <BookButton {...{ setIsBooking }} />
       {isBooking && <BookForm {...{ setIsBooking }} />}
