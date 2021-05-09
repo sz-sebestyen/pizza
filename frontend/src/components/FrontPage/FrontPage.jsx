@@ -6,7 +6,7 @@ import bg from "../../background.jpeg";
 function FrontPage() {
   return (
     <div
-      className="h-screen flex justify-center items-center"
+      className="h-screen flex justify-center items-center bg-center bg-cover"
       style={{ backgroundImage: `url(${bg})` }}
     >
       <Title />
