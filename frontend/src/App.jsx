@@ -34,7 +34,7 @@ function App() {
   }, [menu]);
 
   return (
-    <div className="">
+    <div className="bg-easy">
       {isLoading && <LoadingMask />}
       <FrontPage />
 
