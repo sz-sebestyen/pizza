@@ -20,11 +20,13 @@ function BookForm({ setIsBooking }) {
   const { name, email, date, time, seats } = form;
   const formRef = useRef(null);
 
-  useValidate("name", formRef, name);
-  useValidate("email", formRef, email);
-  useValidate("date", formRef, date);
-  useValidate("time", formRef, time);
-  useValidate("seats", formRef, seats);
+  const areValid = [
+    useValidate("name", formRef, name),
+    useValidate("email", formRef, email),
+    useValidate("date", formRef, date),
+    useValidate("time", formRef, time),
+    useValidate("seats", formRef, seats),
+  ].reduce((acc, cur) => acc && cur);
 
   return (
     <div>
@@ -82,13 +84,14 @@ function BookForm({ setIsBooking }) {
               value={form.time}
               onChange={handleChange}
               required
-              min={new Date(
-                new Date().getTime() + 30 * 60000
-              ).toLocaleString("en-GB", {
-                hour: "numeric",
-                minute: "numeric",
-                hour12: false,
-              })}
+              min={new Date(new Date().getTime() + 30 * 60000).toLocaleString(
+                "en-GB",
+                {
+                  hour: "numeric",
+                  minute: "numeric",
+                  hour12: false,
+                }
+              )}
             />
           </div>
 
@@ -107,7 +110,7 @@ function BookForm({ setIsBooking }) {
           </div>
         </div>
 
-        <Submit />
+        <Submit disabled={!areValid} />
       </div>
     </div>
   );
