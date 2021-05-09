@@ -33,7 +33,7 @@ function Submit({ form, disabled }) {
 
   return (
     <button
-      className="bg-secondary active:bg-secondary-dark hover:bg-secondary-dark text-white p-3 rounded"
+      className="bg-secondary active:bg-secondary-dark hover:bg-secondary-dark text-white p-3 rounded my-6"
       disabled={disabled || fetching || success}
       onClick={send}
     >

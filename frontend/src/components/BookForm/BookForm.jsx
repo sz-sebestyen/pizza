@@ -29,16 +29,17 @@ function BookForm({ setIsBooking }) {
   ].reduce((acc, cur) => acc && cur);
 
   return (
-    <div className="fixed inset-0 bg-white">
-      <ScreenShadow {...{ setIsBooking }} />
+    <div className="fixed inset-0 bg-opacity-50 bg-white ">
+      {/* <ScreenShadow {...{ setIsBooking }} /> */}
 
-      <div>
+      <div className="max-w-screen-sm flex flex-col gap-3 relative bg-white h-full p-3 mx-auto">
         <CloseButton {...{ setIsBooking }} />
 
-        <div ref={formRef}>
-          <div>
+        <div className="flex flex-col gap-3" ref={formRef}>
+          <div className="flex flex-col gap-1">
             <label htmlFor="name">Name</label>
             <input
+              className="border rounded"
               type="text"
               name="name"
               id="name"
@@ -49,9 +50,10 @@ function BookForm({ setIsBooking }) {
             />
           </div>
 
-          <div>
+          <div className="flex flex-col">
             <label htmlFor="email">Email</label>
             <input
+              className="border rounded"
               type="email"
               name="email"
               id="email"
@@ -61,9 +63,10 @@ function BookForm({ setIsBooking }) {
             />
           </div>
 
-          <div>
+          <div className="flex flex-col">
             <label htmlFor="date">Date</label>
             <input
+              className="border rounded"
               type="date"
               name="date"
               id="date"
@@ -74,9 +77,10 @@ function BookForm({ setIsBooking }) {
             />
           </div>
 
-          <div>
+          <div className="flex flex-col">
             <label htmlFor="time">Time</label>
             <input
+              className="border rounded"
               type="time"
               name="time"
               id="time"
@@ -94,9 +98,10 @@ function BookForm({ setIsBooking }) {
             />
           </div>
 
-          <div>
+          <div className="flex flex-col">
             <label htmlFor="seats">Number of seats</label>
             <input
+              className="border rounded"
               type="number"
               name="seats"
               id="seats"
@@ -109,7 +114,9 @@ function BookForm({ setIsBooking }) {
           </div>
         </div>
 
-        <Submit disabled={!areValid} form={form} />
+        <div className="flex justify-center items-center">
+          <Submit disabled={!areValid} form={form} />
+        </div>
       </div>
     </div>
   );
