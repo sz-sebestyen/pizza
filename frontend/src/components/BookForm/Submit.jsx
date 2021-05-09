@@ -32,7 +32,11 @@ function Submit({ form, disabled }) {
   };
 
   return (
-    <button disabled={disabled && fetching && !success} onClick={send}>
+    <button
+      className="bg-secondary active:bg-secondary-dark hover:bg-secondary-dark text-white p-3 rounded"
+      disabled={disabled || fetching || success}
+      onClick={send}
+    >
       {success ? "Success" : "I book the table"}
     </button>
   );
