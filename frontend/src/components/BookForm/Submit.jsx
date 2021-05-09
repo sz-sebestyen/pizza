@@ -15,7 +15,8 @@ function Submit({ form, disabled }) {
         body: JSON.stringify(form),
       });
 
-      console.log(await res.json());
+      console.log("sent: ", form);
+      console.log(await res.text());
     } catch (error) {
       console.error(error);
     } finally {

@@ -39,7 +39,6 @@ function BookForm({ setIsBooking }) {
           <div>
             <label htmlFor="name">Name</label>
             <input
-              pattern="\p{L}+\s\p{L}+"
               type="text"
               name="name"
               id="name"
