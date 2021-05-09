@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import ScreenShadow from "./ScreenShadow";
 import Submit from "./Submit";
 import CloseButton from "./CloseButton";

@@ -10,10 +10,6 @@ const useValidate = (inputId, formRef, dependency) => {
     }
   }, [dependency]);
 
-  /*   useEffect(() => {
-    console.log(isValid);
-  }, [isValid]); */
-
   return isValid;
 };
 
