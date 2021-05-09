@@ -1,9 +1,17 @@
 import React from "react";
-import Background from "./Background";
 import Title from "./Title";
 
+import bg from "../../background.jpeg";
+
 function FrontPage() {
-  return <div className="h-100vh"></div>;
+  return (
+    <div
+      className="h-100vh flex justify-center items-center"
+      style={{ backgroundImage: `url(${bg})` }}
+    >
+      <Title />
+    </div>
+  );
 }
 
 export default FrontPage;
