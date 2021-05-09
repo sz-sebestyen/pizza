@@ -14,7 +14,8 @@ module.exports = {
           DEFAULT: "#5c6ac4",
           dark: "#202e78",
         },
-        easy: "#eedde9",
+        easy: "#eee",
+        dark: "#434343",
       },
       fontFamily: {
         roboto: ['"Roboto"', "sans-serif"],

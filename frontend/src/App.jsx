@@ -29,12 +29,8 @@ function App() {
     }, LOADING_MASK_DURATION);
   }, []);
 
-  useEffect(() => {
-    if (menu) console.log(menu);
-  }, [menu]);
-
   return (
-    <div className="bg-easy">
+    <div className="bg-easy font-roboto text-dark">
       {isLoading && <LoadingMask />}
       <FrontPage />
 
