@@ -110,7 +110,7 @@ function BookForm({ setIsBooking }) {
           </div>
         </div>
 
-        <Submit disabled={!areValid} />
+        <Submit disabled={!areValid} form={form} />
       </div>
     </div>
   );
