@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import ScreenShadow from "./ScreenShadow";
 import Submit from "./Submit";
 import CloseButton from "./CloseButton";
+import useValidate from "./useValidate";
 
 function BookForm({ setIsBooking }) {
   const [form, setForm] = useState({
@@ -17,8 +18,13 @@ function BookForm({ setIsBooking }) {
   };
 
   const { name, email, date, time, seats } = form;
+  const formRef = useRef(null);
 
-  useEffect(() => {}, [name]);
+  useValidate("name", formRef, name);
+  useValidate("email", formRef, email);
+  useValidate("date", formRef, date);
+  useValidate("time", formRef, time);
+  useValidate("seats", formRef, seats);
 
   return (
     <div>
@@ -27,16 +33,18 @@ function BookForm({ setIsBooking }) {
       <div>
         <CloseButton {...{ setIsBooking }} />
 
-        <div>
+        <div ref={formRef}>
           <div>
             <label htmlFor="name">Name</label>
             <input
+              pattern="\p{L}+\s\p{L}+"
               type="text"
               name="name"
               id="name"
               value={form.name}
               onChange={handleChange}
               required
+              minLength="3"
             />
           </div>
 
@@ -61,6 +69,7 @@ function BookForm({ setIsBooking }) {
               value={form.date}
               onChange={handleChange}
               required
+              min={new Date().toISOString().split("T")[0]}
             />
           </div>
 
@@ -73,6 +82,13 @@ function BookForm({ setIsBooking }) {
               value={form.time}
               onChange={handleChange}
               required
+              min={new Date(
+                new Date().getTime() + 30 * 60000
+              ).toLocaleString("en-GB", {
+                hour: "numeric",
+                minute: "numeric",
+                hour12: false,
+              })}
             />
           </div>
 
@@ -85,6 +101,8 @@ function BookForm({ setIsBooking }) {
               value={form.seats}
               onChange={handleChange}
               required
+              min="1"
+              max="6"
             />
           </div>
         </div>
