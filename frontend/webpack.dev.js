@@ -17,6 +17,11 @@ module.exports = merge(common, {
         secure: false,
         changeOrigin: true,
       },
+      "/book": {
+        target: "http://localhost:3000/",
+        secure: false,
+        changeOrigin: true,
+      },
     },
   },
   module: {
